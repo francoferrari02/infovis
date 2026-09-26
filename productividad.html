@@ -120,6 +120,11 @@
       height: 300px !important;
     }
 
+    .tableau-frame {
+      width: 100%;
+      overflow: hidden;
+    }
+
     @media (max-width: 720px) {
       main {
         width: min(100% - 20px, 1080px);
@@ -202,6 +207,42 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="chart-section" aria-label="Distribución mensual de minutos productivos">
+      <div class="tableau-frame">
+        <div class="tableauPlaceholder" id="viz1790390393034" style="position: relative">
+          <noscript>
+            <a href="#">
+              <img alt="¿Septiembre tuvo días productivos más consistentes que agosto?" src="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1_rss.png" style="border: none">
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display: none">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+            <param name="embed_code_version" value="3">
+            <param name="site_root" value="">
+            <param name="name" value="Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1">
+            <param name="tabs" value="no">
+            <param name="toolbar" value="yes">
+            <param name="static_image" value="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1.png">
+            <param name="animate_transition" value="yes">
+            <param name="display_static_image" value="yes">
+            <param name="display_spinner" value="yes">
+            <param name="display_overlay" value="yes">
+            <param name="display_count" value="yes">
+            <param name="language" value="es-ES">
+          </object>
+        </div>
+      </div>
+      <script>
+        const tableauContainer = document.getElementById("viz1790390393034");
+        const tableauViz = tableauContainer.getElementsByTagName("object")[0];
+        tableauViz.style.width = "100%";
+        tableauViz.style.height = (tableauContainer.offsetWidth * 0.75) + "px";
+        const tableauScript = document.createElement("script");
+        tableauScript.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+        tableauViz.parentNode.insertBefore(tableauScript, tableauViz);
+      </script>
     </section>
   </main>
 </body>
