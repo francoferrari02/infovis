@@ -78,6 +78,48 @@
       line-height: 1.55;
     }
 
+    .heatmaps-section {
+      margin-top: 24px;
+    }
+
+    .heatmaps-title {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.2;
+    }
+
+    .heatmaps-intro {
+      margin: 0 0 20px;
+      color: #5f6368;
+      line-height: 1.5;
+    }
+
+    .heatmaps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .heatmap-card {
+      min-width: 0;
+      padding: 12px;
+      overflow: hidden;
+      border: 1px solid #e4e7eb;
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .heatmap-card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .heatmap-card .flourish-embed,
+    .heatmap-card .flourish-embed iframe {
+      width: 100% !important;
+      height: 300px !important;
+    }
+
     @media (max-width: 720px) {
       main {
         width: min(100% - 20px, 1080px);
@@ -90,6 +132,10 @@
 
       .intro {
         font-size: 16px;
+      }
+
+      .heatmaps-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -119,6 +165,43 @@
         tareas realizadas y habitos recordados. La visualizacion prioriza patrones de
         consistencia antes que precision minuto a minuto.
       </p>
+    </section>
+
+    <section class="chart-section heatmaps-section" aria-labelledby="heatmaps-title">
+      <h2 class="heatmaps-title" id="heatmaps-title">¿Cómo cambió la intensidad de cada actividad?</h2>
+      <p class="heatmaps-intro">
+        Los heatmaps muestran los minutos diarios dedicados a cada actividad, organizados por semana calendario y día de la semana.
+      </p>
+      <div class="heatmaps-grid">
+        <article class="heatmap-card">
+          <h3>Universidad</h3>
+          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369624">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript><img src="https://public.flourish.studio/visualisation/30369624/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a universidad."></noscript>
+          </div>
+        </article>
+        <article class="heatmap-card">
+          <h3>Ejercicio</h3>
+          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369692">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript><img src="https://public.flourish.studio/visualisation/30369692/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a ejercicio."></noscript>
+          </div>
+        </article>
+        <article class="heatmap-card">
+          <h3>Proyecto personal</h3>
+          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369697">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript><img src="https://public.flourish.studio/visualisation/30369697/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados al proyecto personal."></noscript>
+          </div>
+        </article>
+        <article class="heatmap-card">
+          <h3>Lectura</h3>
+          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369703">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript><img src="https://public.flourish.studio/visualisation/30369703/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a lectura."></noscript>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 </body>
