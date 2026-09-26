@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Productividad personal - Agosto 2026</title>
+  <title>Productividad personal - Agosto y septiembre 2026</title>
   <style>
     :root {
       color-scheme: light;
@@ -125,6 +125,16 @@
       overflow: hidden;
     }
 
+    .rawgraphs-figure {
+      margin: 0;
+    }
+
+    .rawgraphs-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     @media (max-width: 720px) {
       main {
         width: min(100% - 20px, 1080px);
@@ -149,10 +159,10 @@
   <main>
     <header>
       <p class="eyebrow">Visualizacion de informacion - TP datos personales</p>
-      <h1>Consistencia y productividad personal durante agosto</h1>
+      <h1>Consistencia y productividad personal entre agosto y septiembre</h1>
       <p class="intro">
         Una exploracion visual de como se distribuyo mi tiempo productivo entre universidad,
-        proyecto personal, gimnasio y lectura durante el ultimo mes.
+        proyecto personal, ejercicio y lectura entre agosto y septiembre.
       </p>
     </header>
 
@@ -243,6 +253,16 @@
         tableauScript.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
         tableauViz.parentNode.insertBefore(tableauScript, tableauViz);
       </script>
+    </section>
+
+    <section class="chart-section" aria-labelledby="rawgraphs-title">
+      <h2 class="heatmaps-title" id="rawgraphs-title">¿Cómo evolucionó el promedio diario por actividad?</h2>
+      <p class="heatmaps-intro">
+        El grosor de cada flujo representa los minutos promedio diarios de universidad, proyecto personal, ejercicio y lectura en cada semana.
+      </p>
+      <figure class="rawgraphs-figure">
+        <img src="assets/rawgraphs-evolucion-semanal.svg" alt="Streamgraph semanal de minutos promedio diarios por actividad entre agosto y septiembre de 2026.">
+      </figure>
     </section>
   </main>
 </body>

@@ -1,0 +1,33 @@
+orden_periodo,fecha_inicio,periodo,actividad,ranking,minutos_promedio_diario
+1,2026-08-03,3–9 ago,Universidad,1,192.9
+1,2026-08-03,3–9 ago,Proyecto personal,2,68.6
+1,2026-08-03,3–9 ago,Ejercicio,3,12.9
+1,2026-08-03,3–9 ago,Lectura,4,2.9
+2,2026-08-10,10–16 ago,Universidad,1,197.1
+2,2026-08-10,10–16 ago,Proyecto personal,2,145.7
+2,2026-08-10,10–16 ago,Ejercicio,3,13.6
+2,2026-08-10,10–16 ago,Lectura,4,3.6
+3,2026-08-17,17–23 ago,Universidad,1,199.3
+3,2026-08-17,17–23 ago,Proyecto personal,2,81.4
+3,2026-08-17,17–23 ago,Ejercicio,3,22.9
+3,2026-08-17,17–23 ago,Lectura,4,2.9
+4,2026-08-24,24–30 ago,Universidad,1,212.1
+4,2026-08-24,24–30 ago,Ejercicio,2,25.0
+4,2026-08-24,24–30 ago,Proyecto personal,3,21.4
+4,2026-08-24,24–30 ago,Lectura,4,3.6
+5,2026-08-31,31 ago–6 sep,Universidad,1,235.7
+5,2026-08-31,31 ago–6 sep,Ejercicio,2,32.1
+5,2026-08-31,31 ago–6 sep,Lectura,3,4.3
+5,2026-08-31,31 ago–6 sep,Proyecto personal,4,0.0
+6,2026-09-07,7–13 sep,Universidad,1,257.1
+6,2026-09-07,7–13 sep,Proyecto personal,2,64.3
+6,2026-09-07,7–13 sep,Ejercicio,3,32.1
+6,2026-09-07,7–13 sep,Lectura,4,0.0
+7,2026-09-14,14–20 sep,Universidad,1,265.7
+7,2026-09-14,14–20 sep,Lectura,2,62.1
+7,2026-09-14,14–20 sep,Ejercicio,3,17.1
+7,2026-09-14,14–20 sep,Proyecto personal,4,0.0
+8,2026-09-21,21–25 sep,Universidad,1,318.0
+8,2026-09-21,21–25 sep,Lectura,2,48.0
+8,2026-09-21,21–25 sep,Ejercicio,3,12.0
+8,2026-09-21,21–25 sep,Proyecto personal,4,0.0
