@@ -62,25 +62,25 @@
     .rawgraphs-figure img { display: block; width: 100%; height: auto; }
     .visual-key { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
     .visual-key span { padding: 6px 10px; color: #cbd5e1; font-size: .85rem; background: rgba(255,255,255,.05); border-radius: 8px; }
-    .heatmaps-section { width: 100vw; max-width: none; margin-right: 50%; margin-left: 50%; padding-right: 0; padding-left: 0; transform: translateX(-50%); }
+    .heatmaps-section { width: min(1700px, calc(100vw - 32px)); max-width: none; margin-right: 50%; margin-left: 50%; padding-right: 16px; padding-left: 16px; transform: translateX(-50%); }
     .heatmaps-section > .section-title,
     .heatmaps-section > .section-intro,
-    .heatmaps-section > .conclusion { margin-right: max(24px, calc((100vw - 1160px) / 2)); margin-left: max(24px, calc((100vw - 1160px) / 2)); }
-    .heatmaps-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .heatmaps-section > .conclusion { margin-right: 0; margin-left: 0; }
+    .heatmaps-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
     .heatmap-card { min-width: 0; padding: 0; overflow: visible; background: rgba(8,11,16,.36); border: 1px solid rgba(198,211,237,.14); border-radius: 14px; }
     /* Los iframes de Flourish conservan sus propios estilos; esta reserva evita recortar ejes y etiquetas. */
     .heatmap-card .flourish-embed,.heatmap-card .flourish-embed iframe { display: block; width: 100% !important; min-height: 540px !important; height: 540px !important; border: 0; }
     .tableauPlaceholder { width: 100%; }
     /* Con dos columnas el lienzo nativo de Flourish queda demasiado angosto en
        notebooks. Se usa una columna hasta contar con ancho real suficiente. */
-    @media (max-width: 1599px) and (min-width: 721px) {
+    @media (max-width: 1500px) and (min-width: 721px) {
       .heatmaps-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       main { width: min(100% - 24px, 1160px); padding: 34px 0 48px; }
       .page-header { margin-top: -34px; margin-bottom: 28px; padding-top: 34px; padding-bottom: 42px; }
       .chart-section { margin-top: 22px; border-radius: 16px; }
-      .heatmaps-section { width: 100vw; }
+      .heatmaps-section { width: min(100vw - 16px, 1360px); padding-right: 8px; padding-left: 8px; }
       .heatmaps-section > .section-title,
       .heatmaps-section > .section-intro,
       .heatmaps-section > .conclusion { margin-right: 16px; margin-left: 16px; }
