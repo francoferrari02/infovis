@@ -3,267 +3,133 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Productividad personal - Agosto y septiembre 2026</title>
+  <title>Productividad personal · Agosto y septiembre de 2026</title>
   <style>
     :root {
-      color-scheme: light;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #202124;
-      background: #f6f7f9;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f4f7fb;
+      background: #090b10;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      background: #f6f7f9;
+      min-width: 320px; margin: 0;
+      background: radial-gradient(circle at 15% -10%, rgba(100,125,255,.16), transparent 32rem),
+        radial-gradient(circle at 90% 20%, rgba(38,197,170,.08), transparent 28rem), #090b10;
     }
-
-    main {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 48px 0;
-    }
-
-    header {
-      margin-bottom: 28px;
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      color: #5f6368;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 0;
-      font-size: clamp(34px, 6vw, 56px);
-      line-height: 1.05;
-      letter-spacing: 0;
-    }
-
-    .intro {
-      max-width: 760px;
-      margin: 18px 0 0;
-      color: #3c4043;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
+    main { width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 64px 0 72px; }
+    header { max-width: 860px; margin-bottom: 40px; }
+    .eyebrow { margin: 0 0 12px; color: #aebcff; font-size: .78rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    h1,h2,h3 { color: #f7f9ff; }
+    h1 { max-width: 820px; margin: 0; font-size: clamp(2.25rem, 5.5vw, 4.25rem); line-height: 1.04; letter-spacing: -.045em; }
+    .intro { max-width: 760px; margin: 20px 0 0; color: #c5ccd8; font-size: clamp(1rem, 1.7vw, 1.125rem); line-height: 1.65; }
     .chart-section {
-      margin-top: 34px;
-      padding: 28px;
-      background: #ffffff;
-      border: 1px solid #dde1e6;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(32, 33, 36, 0.08);
+      margin-top: 32px; padding: clamp(20px, 3vw, 34px);
+      background: linear-gradient(145deg, rgba(29,34,46,.96), rgba(18,22,31,.96));
+      border: 1px solid rgba(198,211,237,.16); border-radius: 20px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.24), inset 0 1px rgba(255,255,255,.035);
     }
-
-    .chart-frame {
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .note {
-      max-width: 820px;
-      margin: 22px 0 0;
-      color: #5f6368;
-      font-size: 15px;
-      line-height: 1.55;
-    }
-
-    .heatmaps-section {
-      margin-top: 24px;
-    }
-
-    .heatmaps-title {
-      margin: 0 0 8px;
-      font-size: clamp(24px, 3vw, 32px);
-      line-height: 1.2;
-    }
-
-    .heatmaps-intro {
-      margin: 0 0 20px;
-      color: #5f6368;
-      line-height: 1.5;
-    }
-
-    .heatmaps-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .heatmap-card {
-      min-width: 0;
-      padding: 12px;
-      overflow: hidden;
-      border: 1px solid #e4e7eb;
-      border-radius: 6px;
-      background: #fff;
-    }
-
-    .heatmap-card h3 {
-      margin: 0 0 6px;
-      font-size: 16px;
-    }
-
-    .heatmap-card .flourish-embed,
-    .heatmap-card .flourish-embed iframe {
-      width: 100% !important;
-      height: 300px !important;
-    }
-
-    .tableau-frame {
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .rawgraphs-figure {
-      margin: 0;
-    }
-
-    .rawgraphs-figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
+    .section-title { max-width: 900px; margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -.025em; }
+    .section-intro { max-width: 850px; margin: 10px 0 22px; color: #b6c0d0; line-height: 1.55; }
+    .chart-frame,.tableau-frame { width: 100%; }
+    .embed-surface,.rawgraphs-figure,.tableau-frame { overflow: hidden; border: 1px solid rgba(198,211,237,.17); border-radius: 14px; background: #fff; }
+    .external-legend { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 18px; list-style: none; }
+    .external-legend li { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; color: #dce3ee; font-size: .9rem; font-weight: 650; background: rgba(255,255,255,.055); border: 1px solid rgba(198,211,237,.14); border-radius: 999px; }
+    .legend-dot { width: .7rem; height: .7rem; border-radius: 50%; box-shadow: 0 0 0 3px rgba(255,255,255,.06); }
+    .university { background: #a3acff; } .project { background: #fff0a3; } .exercise { background: #7fe08b; } .reading { background: #f6a9a9; }
+    .note { max-width: 850px; margin: 18px 0 0; color: #aab5c5; font-size: .94rem; line-height: 1.6; }
+    .conclusion { margin-top: 18px; padding: 15px 17px; background: rgba(121,141,255,.1); border: 1px solid rgba(157,174,255,.24); border-radius: 14px; }
+    .conclusion h3 { margin: 0 0 4px; color: #cbd5ff; font-size: .84rem; letter-spacing: .03em; }
+    .conclusion p { margin: 0; color: #d7deec; font-size: .95rem; line-height: 1.5; }
+    .rawgraphs-figure { margin: 0; }
+    .rawgraphs-figure img { display: block; width: 100%; height: auto; }
+    .visual-key { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+    .visual-key span { padding: 6px 10px; color: #cbd5e1; font-size: .85rem; background: rgba(255,255,255,.05); border-radius: 8px; }
+    .heatmaps-section { width: min(1400px, calc(100vw - 48px)); margin-right: 50%; margin-left: 50%; transform: translateX(-50%); }
+    .heatmaps-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+    .heatmap-card { min-width: 0; padding: clamp(14px,2vw,20px); overflow: visible; background: rgba(8,11,16,.36); border: 1px solid rgba(198,211,237,.14); border-radius: 14px; }
+    .heatmap-card h3 { margin: 0 0 12px; font-size: 1.05rem; letter-spacing: -.01em; }
+    /* Los iframes de Flourish conservan sus propios estilos; esta reserva evita recortar ejes y etiquetas. */
+    .heatmap-card .flourish-embed,.heatmap-card .flourish-embed iframe { display: block; width: 100% !important; min-height: 390px !important; height: 390px !important; border: 0; }
+    .tableauPlaceholder { width: 100%; }
     @media (max-width: 720px) {
-      main {
-        width: min(100% - 20px, 1080px);
-        padding: 28px 0;
-      }
-
-      .chart-section {
-        padding: 16px;
-      }
-
-      .intro {
-        font-size: 16px;
-      }
-
-      .heatmaps-grid {
-        grid-template-columns: 1fr;
-      }
+      main { width: min(100% - 24px, 1160px); padding: 34px 0 48px; }
+      header { margin-bottom: 28px; }
+      .chart-section { margin-top: 22px; border-radius: 16px; }
+      .heatmaps-section { width: min(100vw - 24px, 1400px); }
+      .heatmaps-grid { grid-template-columns: 1fr; gap: 16px; }
+      .heatmap-card .flourish-embed,.heatmap-card .flourish-embed iframe { min-height: 360px !important; height: 360px !important; }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <p class="eyebrow">Visualizacion de informacion - TP datos personales</p>
+      <p class="eyebrow">Visualización de información · TP datos personales</p>
       <h1>Consistencia y productividad personal entre agosto y septiembre</h1>
-      <p class="intro">
-        Una exploracion visual de como se distribuyo mi tiempo productivo entre universidad,
-        proyecto personal, ejercicio y lectura entre agosto y septiembre.
-      </p>
+      <p class="intro">Una exploración visual de cómo se distribuyó mi tiempo productivo entre universidad, proyecto personal, ejercicio y lectura.</p>
     </header>
 
-    <section class="chart-section" aria-label="Visualizacion de productividad diaria">
-      <div class="chart-frame">
+    <section class="chart-section" aria-labelledby="distribution-title">
+      <h2 class="section-title" id="distribution-title">¿Cómo se distribuyó mi tiempo productivo?</h2>
+      <p class="section-intro">La composición diaria permite comparar el peso relativo de cada actividad a lo largo del período.</p>
+      <ul class="external-legend" aria-label="Actividades representadas en el gráfico">
+        <li><span class="legend-dot university"></span>Universidad</li><li><span class="legend-dot project"></span>Proyecto personal</li><li><span class="legend-dot exercise"></span>Ejercicio</li><li><span class="legend-dot reading"></span>Lectura</li>
+      </ul>
+      <div class="chart-frame embed-surface">
         <div style="min-height:626px" id="datawrapper-vis-9deDQ">
           <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/9deDQ/embed.js" charset="utf-8" data-target="#datawrapper-vis-9deDQ"></script>
-          <noscript>
-            <img src="https://datawrapper.dwcdn.net/9deDQ/full.png" alt="¿Cómo se compuso mi productividad diaria entre agosto y septiembre? (Gráfico de área)">
-          </noscript>
+          <noscript><img src="https://datawrapper.dwcdn.net/9deDQ/full.png" alt="Composición diaria del tiempo productivo entre agosto y septiembre."></noscript>
         </div>
       </div>
-      <p class="note">
-        Los datos son un registro personal reconstruido a partir del calendario semanal,
-        tareas realizadas y habitos recordados. La visualizacion prioriza patrones de
-        consistencia antes que precision minuto a minuto.
-      </p>
+      <p class="note">Los datos son un registro personal reconstruido a partir del calendario semanal, tareas realizadas y hábitos recordados. La visualización prioriza patrones de consistencia antes que precisión minuto a minuto.</p>
+      <aside class="conclusion" aria-label="Conclusión rápida del gráfico de distribución"><h3>Conclusión rápida</h3><p>El reparto del tiempo cambia durante el período, por lo que el gráfico permite identificar qué actividades sostienen mayor presencia y cuándo aparecen variaciones.</p></aside>
+    </section>
+
+    <section class="chart-section" aria-labelledby="bump-title">
+      <h2 class="section-title" id="bump-title">¿Cómo evolucionó el promedio diario por actividad?</h2>
+      <p class="section-intro">Cada área muestra la evolución semanal de los minutos promedio diarios. Las etiquetas externas aclaran las variables del gráfico: semana de inicio y minutos promedio diarios.</p>
+      <div class="visual-key" aria-label="Claves de lectura del gráfico"><span>Eje horizontal: semana de inicio</span><span>Medida: minutos promedio diarios</span><span>Actividades: Universidad, proyecto personal, ejercicio y lectura</span></div>
+      <figure class="rawgraphs-figure"><img src="assets/rawgraphs-evolucion-semanal.svg" alt="Evolución semanal de minutos promedio diarios por actividad entre agosto y septiembre de 2026."></figure>
+      <aside class="conclusion" aria-label="Conclusión rápida del gráfico de evolución"><h3>Conclusión rápida</h3><p>La universidad se mantiene como el componente más dominante, mientras que las demás actividades presentan cambios de intensidad entre semanas.</p></aside>
     </section>
 
     <section class="chart-section heatmaps-section" aria-labelledby="heatmaps-title">
-      <h2 class="heatmaps-title" id="heatmaps-title">¿Cómo cambió la intensidad de cada actividad?</h2>
-      <p class="heatmaps-intro">
-        Los heatmaps muestran los minutos diarios dedicados a cada actividad, organizados por semana calendario y día de la semana.
-      </p>
+      <h2 class="section-title" id="heatmaps-title">¿Cómo cambió la intensidad de cada actividad?</h2>
+      <p class="section-intro">Los heatmaps muestran los minutos diarios dedicados a cada actividad, organizados por semana calendario y día de la semana.</p>
       <div class="heatmaps-grid">
-        <article class="heatmap-card">
-          <h3>Universidad</h3>
-          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369624">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript><img src="https://public.flourish.studio/visualisation/30369624/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a universidad."></noscript>
-          </div>
-        </article>
-        <article class="heatmap-card">
-          <h3>Ejercicio</h3>
-          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369692">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript><img src="https://public.flourish.studio/visualisation/30369692/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a ejercicio."></noscript>
-          </div>
-        </article>
-        <article class="heatmap-card">
-          <h3>Proyecto personal</h3>
-          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369697">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript><img src="https://public.flourish.studio/visualisation/30369697/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados al proyecto personal."></noscript>
-          </div>
-        </article>
-        <article class="heatmap-card">
-          <h3>Lectura</h3>
-          <div class="flourish-embed flourish-heatmap" data-src="visualisation/30369703">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript><img src="https://public.flourish.studio/visualisation/30369703/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a lectura."></noscript>
-          </div>
-        </article>
+        <article class="heatmap-card"><h3>Universidad</h3><div class="flourish-embed flourish-heatmap" data-src="visualisation/30369624"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30369624/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a universidad."></noscript></div></article>
+        <article class="heatmap-card"><h3>Ejercicio</h3><div class="flourish-embed flourish-heatmap" data-src="visualisation/30369692"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30369692/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a ejercicio."></noscript></div></article>
+        <article class="heatmap-card"><h3>Proyecto personal</h3><div class="flourish-embed flourish-heatmap" data-src="visualisation/30369697"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30369697/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados al proyecto personal."></noscript></div></article>
+        <article class="heatmap-card"><h3>Lectura</h3><div class="flourish-embed flourish-heatmap" data-src="visualisation/30369703"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30369703/thumbnail" width="100%" alt="Heatmap de minutos diarios dedicados a lectura."></noscript></div></article>
       </div>
+      <aside class="conclusion" aria-label="Conclusión rápida de los heatmaps"><h3>Conclusión rápida</h3><p>La vista en cuadrícula facilita comparar la concentración y los cambios diarios de cada actividad sin perder el contexto semanal.</p></aside>
     </section>
 
-    <section class="chart-section" aria-label="Distribución mensual de minutos productivos">
-      <div class="tableau-frame">
-        <div class="tableauPlaceholder" id="viz1790390393034" style="position: relative">
-          <noscript>
-            <a href="#">
-              <img alt="¿Septiembre tuvo días productivos más consistentes que agosto?" src="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1_rss.png" style="border: none">
-            </a>
-          </noscript>
-          <object class="tableauViz" style="display: none">
-            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
-            <param name="embed_code_version" value="3">
-            <param name="site_root" value="">
-            <param name="name" value="Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1">
-            <param name="tabs" value="no">
-            <param name="toolbar" value="yes">
-            <param name="static_image" value="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1.png">
-            <param name="animate_transition" value="yes">
-            <param name="display_static_image" value="yes">
-            <param name="display_spinner" value="yes">
-            <param name="display_overlay" value="yes">
-            <param name="display_count" value="yes">
-            <param name="language" value="es-ES">
-          </object>
-        </div>
-      </div>
-      <script>
-        const tableauContainer = document.getElementById("viz1790390393034");
-        const tableauViz = tableauContainer.getElementsByTagName("object")[0];
-        tableauViz.style.width = "100%";
-        tableauViz.style.height = (tableauContainer.offsetWidth * 0.75) + "px";
-        const tableauScript = document.createElement("script");
-        tableauScript.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-        tableauViz.parentNode.insertBefore(tableauScript, tableauViz);
-      </script>
-    </section>
-
-    <section class="chart-section" aria-labelledby="rawgraphs-title">
-      <h2 class="heatmaps-title" id="rawgraphs-title">¿Cómo evolucionó el promedio diario por actividad?</h2>
-      <p class="heatmaps-intro">
-        El grosor de cada flujo representa los minutos promedio diarios de universidad, proyecto personal, ejercicio y lectura en cada semana.
-      </p>
-      <figure class="rawgraphs-figure">
-        <img src="assets/rawgraphs-evolucion-semanal.svg" alt="Streamgraph semanal de minutos promedio diarios por actividad entre agosto y septiembre de 2026.">
-      </figure>
+    <section class="chart-section" aria-labelledby="boxplot-title">
+      <h2 class="section-title" id="boxplot-title">¿Cómo varió la productividad diaria entre agosto y septiembre?</h2>
+      <p class="section-intro">El boxplot resume la distribución de los minutos productivos diarios y permite contrastar nivel típico, dispersión y valores extremos entre ambos meses.</p>
+      <div class="tableau-frame"><div class="tableauPlaceholder" id="viz1790390393034" style="position: relative">
+        <noscript><a href="#"><img alt="Comparación de la productividad diaria entre agosto y septiembre." src="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1_rss.png" style="border: none"></a></noscript>
+        <object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3"><param name="site_root" value=""><param name="name" value="Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1"><param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="https://public.tableau.com/static/images/Se/Septiembretuvodasproductivosmsconsistentesqueagosto/Hoja1/1.png"><param name="animate_transition" value="yes"><param name="display_static_image" value="yes"><param name="display_spinner" value="yes"><param name="display_overlay" value="yes"><param name="display_count" value="yes"><param name="language" value="es-ES">
+        </object>
+      </div></div>
+      <aside class="conclusion" aria-label="Conclusión rápida del boxplot"><h3>Conclusión rápida</h3><p>La comparación mensual muestra no solo diferencias en el nivel diario de productividad, sino también cuánto varían los días dentro de cada mes.</p></aside>
     </section>
   </main>
+  <script>
+    const tableauContainer = document.getElementById("viz1790390393034");
+    const tableauViz = tableauContainer.getElementsByTagName("object")[0];
+    const resizeTableau = () => {
+      tableauViz.style.width = "100%";
+      tableauViz.style.height = `${Math.max(420, Math.min(760, tableauContainer.offsetWidth * .68))}px`;
+    };
+    resizeTableau();
+    new ResizeObserver(resizeTableau).observe(tableauContainer);
+    const tableauScript = document.createElement("script");
+    tableauScript.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    tableauViz.parentNode.insertBefore(tableauScript, tableauViz);
+  </script>
 </body>
 </html>
