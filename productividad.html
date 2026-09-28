@@ -19,13 +19,13 @@
     }
     main { width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 64px 0 72px; }
     .page-header {
-      max-width: 960px;
-      margin-bottom: 48px;
-      padding: clamp(24px, 4vw, 42px);
-      background: linear-gradient(135deg, rgba(42, 50, 73, .76), rgba(20, 24, 35, .82));
-      border: 1px solid rgba(174, 188, 255, .2);
-      border-radius: 24px;
-      box-shadow: 0 20px 48px rgba(0, 0, 0, .2), inset 0 1px rgba(255, 255, 255, .05);
+      width: 100vw;
+      max-width: none;
+      margin: -64px calc(50% - 50vw) 48px;
+      padding: clamp(32px, 5vw, 68px) max(24px, calc((100vw - 1160px) / 2));
+      background: linear-gradient(115deg, #183d84 0%, #102858 54%, #0b172f 100%);
+      border-bottom: 1px solid rgba(174, 202, 255, .32);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .22), inset 0 -1px rgba(255, 255, 255, .05);
     }
     .page-header::after {
       display: block;
@@ -70,12 +70,12 @@
     .tableauPlaceholder { width: 100%; }
     /* Con dos columnas el lienzo nativo de Flourish queda demasiado angosto en
        notebooks. Se usa una columna hasta contar con ancho real suficiente. */
-    @media (max-width: 1279px) and (min-width: 721px) {
+    @media (max-width: 1599px) and (min-width: 721px) {
       .heatmaps-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       main { width: min(100% - 24px, 1160px); padding: 34px 0 48px; }
-      .page-header { margin-bottom: 28px; border-radius: 18px; }
+      .page-header { margin-top: -34px; margin-bottom: 28px; padding-top: 34px; padding-bottom: 42px; }
       .chart-section { margin-top: 22px; border-radius: 16px; }
       .heatmaps-section { width: min(100vw - 16px, 1520px); padding-right: 8px; padding-left: 8px; }
       .heatmaps-grid { grid-template-columns: 1fr; gap: 16px; }
